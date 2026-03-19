@@ -7,9 +7,9 @@ const LOGO_ICON = '/logo_1.png'
 const LOGO_TEXT = '/logo_2.png'
 
 const SOCIALS = [
-  { label: 'LinkedIn', Icon: LinkedInIcon },
-  { label: 'Facebook', Icon: FacebookIcon },
-  { label: 'Instagram', Icon: InstagramIcon },
+  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/company/waafoo/' },
+  { label: 'Facebook', Icon: FacebookIcon, href: '#' },
+  { label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/waafooforyou/' },
 ]
 
 export default function WaafooComingSoon() {
@@ -90,8 +90,8 @@ export default function WaafooComingSoon() {
       {/* ── FOOTER ── */}
       <footer className={styles.footer}>
         <div className={styles.socials}>
-          {SOCIALS.map(({ label, Icon }) => (
-            <a key={label} href="#" className={styles.socBtn} aria-label={label}>
+          {SOCIALS.map(({ label, Icon, href }) => (
+            <a key={label} href={href} target={href !== '#' ? '_blank' : undefined} rel={href !== '#' ? 'noopener noreferrer' : undefined} className={styles.socBtn} aria-label={label}>
               <Icon />
             </a>
           ))}
