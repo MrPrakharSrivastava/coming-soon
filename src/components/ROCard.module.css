@@ -4,6 +4,19 @@
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 901px) {
+  .stack {
+    max-width: clamp(260px, 36vh, 460px);
+  }
+}
+
+@media (max-width: 900px) {
+  .stack {
+    max-width: 500px;
+  }
 }
 
 .card {
