@@ -9,7 +9,7 @@ export default function ROCard() {
     <div className={styles.stack}>
       <div className={styles.card}>
         <div className={styles.tdsOverlay}>
-          <TdsChip />
+          {/* <TdsChip /> */}
         </div>
         <img src={RO_IMG_1} alt="Your RO is lying to you" className={styles.img} />
       </div>
