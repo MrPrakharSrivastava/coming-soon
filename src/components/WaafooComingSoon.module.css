@@ -4,13 +4,6 @@
   flex-direction: column;
   min-height: 100vh;
 }
-@media (min-width: 901px) {
-  .wrapper {
-    height: 100vh;
-    overflow: hidden;
-  }
-}
-
 /* ── BIG ORB ── */
 .bgOrb {
   position: fixed;
@@ -67,9 +60,9 @@
   z-index: 10;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: start;
   flex: 1;
-  padding: 0 52px;
+  padding: 20px 52px 60px;
   gap: 40px;
 }
 
@@ -77,9 +70,9 @@
 .left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: 0;
-  position: relative;
+  padding-top: 40px;
+  position: sticky;
+  top: 40px;
 }
 
 .tag {
