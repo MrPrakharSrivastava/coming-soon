@@ -1,13 +1,13 @@
-import styles from '../styles/WaafooComingSoon.module.css';
+import styles from './TdsChip.module.css'
 
 export default function TdsChip() {
   return (
-    <div className={`${styles.miniCard} ${styles.cardTds}`}>
-      <div className={styles.tdsCircle}>28</div>
-      <div>
-        <div className={styles.tdsInfoLabel}>TDS Level</div>
-        <div className={styles.tdsInfoVal}>Excellent ✓</div>
+    <div className={styles.chip}>
+      <div className={styles.circle}>28</div>
+      <div className={styles.info}>
+        <div className={styles.label}>TDS LEVEL</div>
+        <div className={styles.val}>Excellent ✓</div>
       </div>
     </div>
-  );
+  )
 }

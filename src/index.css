@@ -1,16 +1,14 @@
-
 :root {
-  --teal:        #1FB5A8;
+  --teal:        #1AB5A8;
   --teal-dark:   #0E8F85;
   --teal-deeper: #0A6B63;
-  --teal-glow:   rgba(31, 181, 168, 0.18);
-  --teal-bg:     rgba(31, 181, 168, 0.08);
   --ink:         #071A19;
-  --bg:          #F3FAFA;
+  --bg:          #EDF7F6;
   --white:       #ffffff;
   --text:        #0D2625;
   --text2:       #3D5C5A;
   --muted:       #7A9E9C;
+  --teal-bg:     rgba(26, 181, 168, 0.09);
 }
 
 *,
@@ -26,10 +24,10 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  overflow-x: hidden;
   min-height: 100vh;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }

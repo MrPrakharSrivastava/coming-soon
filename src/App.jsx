@@ -1,5 +1,5 @@
-import WaafooComingSoon from './components/WaafooComingSoon';
+import WaafooComingSoon from './components/WaafooComingSoon'
 
 export default function App() {
-  return <WaafooComingSoon />;
+  return <WaafooComingSoon />
 }

@@ -1,0 +1,53 @@
+/* Matches image 3 — horizontal pill card */
+.chip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow:
+    0 8px 32px rgba(13, 38, 37, 0.10),
+    0 2px 8px rgba(13, 38, 37, 0.06);
+  padding: 16px 22px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(26, 181, 168, 0.4);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.val {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--teal-dark);
+}

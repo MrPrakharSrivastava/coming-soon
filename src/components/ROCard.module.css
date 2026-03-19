@@ -1,0 +1,33 @@
+/* Two images stacked vertically */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(13, 38, 37, 0.15),
+    0 4px 16px rgba(13, 38, 37, 0.08);
+  animation: cardFloat 6s ease-in-out infinite alternate;
+}
+
+.card:nth-child(2) {
+  animation-delay: -3s;
+}
+
+@keyframes cardFloat {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-8px); }
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
