@@ -1,3 +1,16 @@
+/* ── WRAPPER ── */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+@media (min-width: 901px) {
+  .wrapper {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
 /* ── BIG ORB ── */
 .bgOrb {
   position: fixed;
@@ -54,9 +67,9 @@
   z-index: 10;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: start;
-  min-height: calc(100vh - 96px);
-  padding: 20px 52px 60px;
+  align-items: center;
+  flex: 1;
+  padding: 0 52px;
   gap: 40px;
 }
 
@@ -269,7 +282,7 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1100px) {
-  .main   { padding: 20px 36px 60px; gap: 32px; }
+  .main   { padding: 0 36px; gap: 32px; }
   .nav    { padding: 24px 36px; }
   .footer { padding: 16px 36px 32px; }
 }

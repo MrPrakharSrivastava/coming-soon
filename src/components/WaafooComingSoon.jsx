@@ -28,7 +28,7 @@ export default function WaafooComingSoon() {
   }
 
   return (
-    <>
+    <div className={styles.wrapper}>
       {/* Background orb */}
       <div className={styles.bgOrb} />
 
@@ -100,6 +100,6 @@ export default function WaafooComingSoon() {
           Email Us
         </a>
       </footer>
-    </>
+    </div>
   )
 }
