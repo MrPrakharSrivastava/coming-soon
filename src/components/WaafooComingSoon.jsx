@@ -5,6 +5,7 @@ import { CheckIcon, LinkedInIcon, FacebookIcon, InstagramIcon } from './Icons'
 
 const LOGO_ICON = '/logo_1.png'
 const LOGO_TEXT = '/logo_2.png'
+const WATERMARK_IMG = '/image_2.jpeg'
 
 const SOCIALS = [
   { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/company/waafoo/' },
@@ -29,6 +30,9 @@ export default function WaafooComingSoon() {
 
   return (
     <div className={styles.wrapper}>
+      {/* Background watermark */}
+      <img src={WATERMARK_IMG} className={styles.watermark} alt="" />
+
       {/* Background orb */}
       <div className={styles.bgOrb} />
 
