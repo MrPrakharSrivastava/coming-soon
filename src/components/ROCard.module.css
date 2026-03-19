@@ -9,7 +9,7 @@
 .card {
   width: 100%;
   border-radius: 20px;
-  overflow: hidden;
+  position: relative;
   box-shadow:
     0 20px 60px rgba(13, 38, 37, 0.15),
     0 4px 16px rgba(13, 38, 37, 0.08);
@@ -30,4 +30,20 @@
   height: auto;
   display: block;
   object-fit: cover;
+  border-radius: 20px;
+}
+
+.tdsOverlay {
+  position: absolute;
+  left: 0;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+@media (max-width: 900px) {
+  .tdsOverlay {
+    left: 50%;
+    top: 0;
+  }
 }

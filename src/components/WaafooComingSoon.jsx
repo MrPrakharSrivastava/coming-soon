@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import styles from './WaafooComingSoon.module.css'
 import ROCard from './ROCard'
-import TdsChip from './TdsChip'
 import { CheckIcon, LinkedInIcon, FacebookIcon, InstagramIcon } from './Icons'
 
 const LOGO_ICON = '/logo_1.png'
@@ -83,9 +82,6 @@ export default function WaafooComingSoon() {
 
         {/* RIGHT — two image cards */}
         <div className={styles.right}>
-          <div className={styles.tdsWrapOverlay}>
-            <TdsChip />
-          </div>
           <ROCard />
         </div>
 
