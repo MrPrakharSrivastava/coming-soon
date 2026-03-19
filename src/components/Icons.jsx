@@ -20,6 +20,11 @@ export const CheckIcon = () => (
     <path d="M9 12l2 2 4-4" />
   </svg>
 );
+<a href="https://linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
+  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 5 2.12 5 3.5zM.5 8h4v12h-4V8zm7.5 0h3.8v1.64h.05c.53-1 1.82-2.06 3.75-2.06 4 0 4.74 2.63 4.74 6.05V20h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V20h-4V8z"/>
+  </svg>
+</a>
 
 export const FacebookIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor">
