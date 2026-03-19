@@ -16,9 +16,7 @@ const LOGO_TEXT = 'data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1B
 
 const SOCIALS = [
   { label: 'Facebook',  Icon: FacebookIcon  },
-  { label: 'Twitter',   Icon: TwitterIcon   },
   { label: 'Instagram', Icon: InstagramIcon },
-  { label: 'YouTube',   Icon: YouTubeIcon   },
 ];
 
 export default function WaafooComingSoon() {
