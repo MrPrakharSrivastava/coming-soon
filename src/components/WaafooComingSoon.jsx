@@ -46,6 +46,9 @@ export default function WaafooComingSoon() {
 
         {/* LEFT */}
         <div className={styles.left}>
+          <div className={styles.tdsWrap}>
+            <TdsChip />
+          </div>
           <div className={styles.tag}>
             <div className={styles.tagLine} />
             Coming Soon
@@ -81,9 +84,8 @@ export default function WaafooComingSoon() {
           )}
         </div>
 
-        {/* RIGHT — TDS chip on top, two image cards below */}
+        {/* RIGHT — two image cards */}
         <div className={styles.right}>
-          <TdsChip />
           <ROCard />
         </div>
 

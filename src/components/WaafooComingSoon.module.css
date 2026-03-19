@@ -69,6 +69,12 @@
   top: 40px;
 }
 
+.tdsWrap {
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
 .tag {
   display: flex;
   align-items: center;
