@@ -4,19 +4,19 @@ import ROCard from './ROCard'
 import TdsChip from './TdsChip'
 import { CheckIcon, LinkedInIcon, FacebookIcon, InstagramIcon } from './Icons'
 
-const LOGO_ICON = '/image_1.jped'
-const LOGO_TEXT = '/image_2.jped'
+const LOGO_ICON = '/logo_1.png'
+const LOGO_TEXT = '/logo_2.png'
 
 const SOCIALS = [
-  { label: 'LinkedIn',  Icon: LinkedInIcon  },
-  { label: 'Facebook',  Icon: FacebookIcon  },
+  { label: 'LinkedIn', Icon: LinkedInIcon },
+  { label: 'Facebook', Icon: FacebookIcon },
   { label: 'Instagram', Icon: InstagramIcon },
 ]
 
 export default function WaafooComingSoon() {
-  const [email, setEmail]         = useState('')
+  const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const [error, setError]         = useState(false)
+  const [error, setError] = useState(false)
 
   const handleSubmit = () => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -36,7 +36,7 @@ export default function WaafooComingSoon() {
       {/* ── NAV ── */}
       <nav className={styles.nav}>
         <div className={styles.navLogo}>
-          <img className={styles.navIcon}    src={LOGO_ICON} alt="Waafoo icon" />
+          <img className={styles.navIcon} src={LOGO_ICON} alt="Waafoo icon" />
           <img className={styles.navTextImg} src={LOGO_TEXT} alt="waafoo" />
         </div>
       </nav>
@@ -46,9 +46,6 @@ export default function WaafooComingSoon() {
 
         {/* LEFT */}
         <div className={styles.left}>
-          <div className={styles.tdsWrap}>
-            <TdsChip />
-          </div>
           <div className={styles.tag}>
             <div className={styles.tagLine} />
             Coming Soon
@@ -86,6 +83,9 @@ export default function WaafooComingSoon() {
 
         {/* RIGHT — two image cards */}
         <div className={styles.right}>
+          <div className={styles.tdsWrapOverlay}>
+            <TdsChip />
+          </div>
           <ROCard />
         </div>
 
