@@ -19,7 +19,7 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  opacity: 0.12;
+  opacity: 0.20;
   pointer-events: none;
   z-index: -1;
 }
@@ -32,12 +32,10 @@
   transform: translateY(-50%);
   width: 58vw;
   height: 90vh;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    rgba(26, 181, 168, 0.22) 0%,
-    rgba(26, 181, 168, 0.10) 40%,
-    transparent 68%
-  );
+  background: radial-gradient(ellipse at 50% 50%,
+      rgba(26, 181, 168, 0.22) 0%,
+      rgba(26, 181, 168, 0.10) 40%,
+      transparent 68%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
@@ -149,7 +147,7 @@
 .formWrap:focus-within {
   border-color: var(--teal);
   box-shadow: 0 4px 28px rgba(26, 181, 168, 0.2),
-              0 0 0 4px rgba(26, 181, 168, 0.07);
+    0 0 0 4px rgba(26, 181, 168, 0.07);
 }
 
 .formWrap.err {
@@ -284,24 +282,50 @@
 
 /* ── KEYFRAMES ── */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(22px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-14px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1100px) {
-  .main   { padding: 0 36px; gap: 32px; }
-  .nav    { padding: 24px 36px; }
-  .footer { padding: 16px 36px 32px; }
+  .main {
+    padding: 0 36px;
+    gap: 32px;
+  }
+
+  .nav {
+    padding: 24px 36px;
+  }
+
+  .footer {
+    padding: 16px 36px 32px;
+  }
 }
 
 @media (max-width: 900px) {
-  .nav  { padding: 20px 24px; }
+  .nav {
+    padding: 20px 24px;
+  }
+
   .main {
     grid-template-columns: 1fr;
     padding: 20px 24px 48px;
@@ -309,22 +333,53 @@
     gap: 32px;
     align-items: start;
   }
+
   .left {
     position: static;
     padding-top: 0;
   }
-  .formWrap { max-width: 100%; }
-  .footer { padding: 16px 24px 28px; flex-wrap: wrap; gap: 16px; }
+
+  .formWrap {
+    max-width: 100%;
+  }
+
+  .footer {
+    padding: 16px 24px 28px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 600px) {
-  .nav    { padding: 18px 20px; }
-  .main   { padding: 16px 20px 40px; gap: 24px; }
-  .headline { font-size: clamp(32px, 9vw, 46px); letter-spacing: -1.5px; }
-  .footer { padding: 14px 20px 24px; flex-direction: column; align-items: flex-start; gap: 18px; }
+  .nav {
+    padding: 18px 20px;
+  }
+
+  .main {
+    padding: 16px 20px 40px;
+    gap: 24px;
+  }
+
+  .headline {
+    font-size: clamp(32px, 9vw, 46px);
+    letter-spacing: -1.5px;
+  }
+
+  .footer {
+    padding: 14px 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
 }
 
 @media (max-width: 400px) {
-  .headline { font-size: 30px; }
-  .btn { padding: 13px 22px; font-size: 13px; }
+  .headline {
+    font-size: 30px;
+  }
+
+  .btn {
+    padding: 13px 22px;
+    font-size: 13px;
+  }
 }
