@@ -34,12 +34,18 @@
 }
 
 @keyframes cardFloat {
-  from { transform: translateY(0); }
-  to   { transform: translateY(-8px); }
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-8px);
+  }
 }
 
 .img {
   width: 100%;
+  margin-top: 110px;
   height: auto;
   display: block;
   object-fit: cover;
