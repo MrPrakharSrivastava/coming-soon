@@ -9,7 +9,7 @@
 
 @media (min-width: 901px) {
   .stack {
-    max-width: clamp(350px, 46vh, 490px);
+    max-width: clamp(380px, 45vw, 680px);
   }
 }
 
