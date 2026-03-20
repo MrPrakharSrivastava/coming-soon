@@ -100,7 +100,7 @@ export default function WaafooComingSoon() {
             </a>
           ))}
         </div>
-        <a href="mailto:connect@waafoo.in" className={styles.emailLink}>
+        <a href="mailto:hello@waafoo.in" className={styles.emailLink}>
           Email Us
         </a>
       </footer>
