@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import styles from './WaafooComingSoon.module.css'
 import ROCard from './ROCard'
 import { CheckIcon, LinkedInIcon, FacebookIcon, InstagramIcon } from './Icons'
@@ -17,6 +18,7 @@ export default function WaafooComingSoon() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = () => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -25,7 +27,29 @@ export default function WaafooComingSoon() {
       setTimeout(() => setError(false), 1200)
       return
     }
-    setSubmitted(true)
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS credentials are not configured in .env.local')
+      alert('Email service is missing configuration. Please check the console.')
+      return
+    }
+
+    setLoading(true)
+    emailjs.send(serviceId, templateId, { email: email.trim() }, publicKey)
+      .then(() => {
+        setLoading(false)
+        setSubmitted(true)
+      })
+      .catch((err) => {
+        console.error('Failed to send email:', err)
+        setLoading(false)
+        setError(true)
+        setTimeout(() => setError(false), 1200)
+      })
   }
 
   return (
@@ -68,10 +92,11 @@ export default function WaafooComingSoon() {
                   placeholder="Enter your email address"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
-                  onKeyDown={e => e.key === 'Enter' && handleSubmit()}
+                  onKeyDown={e => e.key === 'Enter' && !loading && handleSubmit()}
+                  disabled={loading}
                 />
-                <button className={styles.btn} onClick={handleSubmit}>
-                  Notify Me
+                <button className={styles.btn} onClick={handleSubmit} disabled={loading}>
+                  {loading ? 'Submitting...' : 'Notify Me'}
                 </button>
               </div>
               <p className={styles.spam}>*Don't worry, we will not spam you :)</p>
